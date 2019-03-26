@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 import defineTranslation from "../../defineTranslation";
 
@@ -17,6 +18,9 @@ const OtherPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Other</title>
+      </Helmet>
       <h1>About Other</h1>
       <p>{t("name")}</p>
       <p>
