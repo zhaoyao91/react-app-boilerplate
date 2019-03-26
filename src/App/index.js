@@ -4,6 +4,7 @@ import { I18nextProvider } from "react-i18next";
 
 import createI18N from "./createI18N";
 import Viewport from "./comps/Viewport";
+import Loading from "./comps/Loading";
 
 const MainPage = lazy(() => import("./MainPage"));
 const AboutPage = lazy(() => import("./AboutPage"));
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <I18nextProvider i18n={i18n}>
       <Viewport>
-        <Suspense fallback={<p>loading...</p>}>
+        <Suspense fallback={<Loading />}>
           <Router>
             <Switch>
               <Route exact path="/" component={MainPage} />
