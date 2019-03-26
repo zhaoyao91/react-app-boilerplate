@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 
-import useLocales from "../../hooks/useLocales";
+import defineTranslation from "../../defineTranslation";
 
-const locales = {
-  namespace: __filename,
+const { Translation, useTranslation } = defineTranslation(__filename, {
   en: {
     name: "Bob"
   },
   zh: {
     name: "鲍勃"
   }
-};
+});
 
 const OtherPage = () => {
-  const { Translation } = useLocales(locales);
-
   const [count, setCount] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <>
       <h1>About Other</h1>
+      <p>{t("name")}</p>
       <p>
         <Translation>{t => t("name")}</Translation>
       </p>
