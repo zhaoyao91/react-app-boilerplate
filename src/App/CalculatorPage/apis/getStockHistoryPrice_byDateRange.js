@@ -5,7 +5,7 @@ import urlJoin from "url-join";
 import { DateTime } from "luxon";
 import qs from "query-string";
 
-import { apiServerBaseUrl } from "../../../configs";
+import { apiServerBaseUrl } from "../../configs";
 
 // ISODate string, YYYY-MM-DD
 type ISODate = string;

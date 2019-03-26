@@ -3,7 +3,7 @@
 import axios from "axios";
 import urlJoin from "url-join";
 
-import { apiServerBaseUrl } from "../../../configs";
+import { apiServerBaseUrl } from "../../configs";
 
 const url = urlJoin(apiServerBaseUrl, "/codes/");
 
