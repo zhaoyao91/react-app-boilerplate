@@ -8,9 +8,9 @@ import Viewport from "./comps/Viewport";
 import Loading from "./comps/Loading";
 import ErrorBoundary from "./comps/ErrorBoundary";
 
-const MainPage = lazy(() => import("./MainPage"));
-const AboutPage = lazy(() => import("./AboutPage"));
-const NotFoundPage = lazy(() => import("./NotFoundPage"));
+const MainPage = lazy(() => import("./pages/Main"));
+const AboutPage = lazy(() => import("./pages/About"));
+const NotFoundPage = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   const i18n = useMemo(() => createI18N(), []);

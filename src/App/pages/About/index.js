@@ -2,9 +2,9 @@ import React, { lazy } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-const MainPage = lazy(() => import("./MainPage"));
-const OtherPage = lazy(() => import("./OtherPage"));
-const NotFoundPage = lazy(() => import("../NotFoundPage"));
+const MainPage = lazy(() => import("./pages/Main"));
+const OtherPage = lazy(() => import("./pages/Other"));
+const NotFoundPage = lazy(() => import("../NotFound"));
 
 const AboutPage = ({ match }) => (
   <>
